@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti - SCUBA.SHOP</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="depth-overlay"></div>
+    <div class="ocean-ambient">
+        <span class="bubble bubble-1"></span>
+        <span class="bubble bubble-2"></span>
+        <span class="bubble bubble-3"></span>
+        <span class="bubble bubble-4"></span>
+        <span class="bubble bubble-5"></span>
+        <span class="seaweed seaweed-1"></span>
+        <span class="seaweed seaweed-2"></span>
+        <span class="seaweed seaweed-3"></span>
+    </div>
+    
+    <div class="depth-indicator"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="./index.html" class="logo">SCUBA.SHOP</a>
+            <div class="nav-menu">
+                <a href="./index.html" class="nav-link">HOME</a>
+                <a href="./catalogo.html" class="nav-link">CATALOGO</a>
+                <a href="./contatti.html" class="nav-link active">CONTATTI</a>
+                <a href="./carrello.html" class="nav-link cart-link">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Title -->
+    <section class="page-header">
+        <h1>CONTATTI</h1>
+        <p>Rimani in contatto con il nostro team</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-layout">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Inviaci un Messaggio</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="contactName">Nome</label>
+                            <input type="text" id="contactName" placeholder="Il tuo nome" required class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" placeholder="La tua email" required class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactPhone">Telefono</label>
+                            <input type="tel" id="contactPhone" placeholder="Il tuo telefono" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactSubject">Oggetto</label>
+                            <select id="contactSubject" required class="form-input">
+                                <option value="">Seleziona un argomento</option>
+                                <option value="info-prodotto">Informazioni Prodotto</option>
+                                <option value="ordine">Domanda su Ordine</option>
+                                <option value="spedizione">Spedizione</option>
+                                <option value="reclamo">Reclamo</option>
+                                <option value="altro">Altro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">Messaggio</label>
+                            <textarea id="contactMessage" placeholder="Scrivi il tuo messaggio..." required class="form-input" rows="6"></textarea>
+                        </div>
+
+                        <button type="submit" class="cta-button">Invia Messaggio</button>
+                    </form>
+
+                    <div id="contactMessage" class="contact-message" style="display: none;"></div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Informazioni di Contatto</h2>
+
+                    <div class="info-block">
+                        <h4>📍 Indirizzo</h4>
+                        <p>Via Subacquea 123<br>98100 Messina<br>Italia</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h4>📞 Telefono</h4>
+                        <p><a href="tel:+39123456789">+39 123 456 7890</a></p>
+                        <p>Lun-Ven: 09:00 - 18:00</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h4>✉️ Email</h4>
+                        <p><a href="mailto:info@scuba.shop">info@scuba.shop</a></p>
+                        <p><a href="mailto:support@scuba.shop">support@scuba.shop</a></p>
+                    </div>
+
+                    <div class="info-block">
+                        <h4>⏰ Orari</h4>
+                        <p>Lunedì - Venerdì: 09:00 - 18:00</p>
+                        <p>Sabato: 10:00 - 14:00</p>
+                        <p>Domenica: Chiuso</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h4>🔗 Social</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link">Facebook</a>
+                            <a href="#" class="social-link">Instagram</a>
+                            <a href="#" class="social-link">YouTube</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2>Domande Frequenti</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>Quali sono i tempi di consegna?</h4>
+                        <p>Le spedizioni vengono effettuate in 1-3 giorni lavorativi. Il trasporto richiede solitamente 3-5 giorni.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Accettate resi?</h4>
+                        <p>Sì, accettiamo resi entro 30 giorni dall'acquisto in perfette condizioni.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Quale garanzia offrite?</h4>
+                        <p>Tutti i prodotti hanno garanzia di 2 anni contro i difetti di fabbricazione.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Spedite all'estero?</h4>
+                        <p>Sì, spediamo in tutta Europa. Contattaci per informazioni sui costi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Chi Siamo</h4>
+                <p>SCUBA.SHOP è il leader nel settore dell'attrezzatura subacquea premium.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Link Utili</h4>
+                <ul>
+                    <li><a href="./catalogo.html">Catalogo</a></li>
+                    <li><a href="./contatti.html">Contatti</a></li>
+                    <li><a href="./carrello.html">Carrello</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contatti</h4>
+                <p>Email: info@scuba.shop</p>
+                <p>Tel: +39 123 456 7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SCUBA.SHOP | Created by Carlo Di Bari & Giorgio Sassanelli — 5L</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+</html>

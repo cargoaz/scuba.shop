@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettagli Prodotto - SCUBA.SHOP</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="depth-overlay"></div>
+    <div class="ocean-ambient">
+        <span class="bubble bubble-1"></span>
+        <span class="bubble bubble-2"></span>
+        <span class="bubble bubble-3"></span>
+        <span class="bubble bubble-4"></span>
+        <span class="bubble bubble-5"></span>
+        <span class="seaweed seaweed-1"></span>
+        <span class="seaweed seaweed-2"></span>
+        <span class="seaweed seaweed-3"></span>
+    </div>
+    
+    <div class="depth-indicator"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="./index.html" class="logo">SCUBA.SHOP</a>
+            <div class="nav-menu">
+                <a href="./index.html" class="nav-link">HOME</a>
+                <a href="./catalogo.html" class="nav-link">CATALOGO</a>
+                <a href="./contatti.html" class="nav-link">CONTATTI</a>
+                <a href="./carrello.html" class="nav-link cart-link">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="./index.html">Home</a> / 
+        <a href="./catalogo.html">Catalogo</a> / 
+        <span id="breadcrumbProduct">Prodotto</span>
+    </div>
+
+    <!-- Product Details -->
+    <section class="product-detail-section">
+        <div class="container">
+            <div class="product-detail-container">
+                <div class="product-image-container">
+                    <img id="productImage" src="./img/placeholder.svg" alt="Prodotto" class="product-image" onerror="this.src='./img/placeholder.svg'">
+                </div>
+                <div class="product-info">
+                    <h1 id="productName">Nome Prodotto</h1>
+                    <div class="product-brand" id="productBrand">Brand</div>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (127 recensioni)</div>
+                    
+                    <div class="product-price-section">
+                        <span class="product-price" id="productPrice">€0.00</span>
+                        <span class="product-sku" id="productSKU">SKU: -</span>
+                    </div>
+
+                    <div class="product-description" id="productDescription">
+                        Descrizione prodotto
+                    </div>
+
+                    <div class="product-specs">
+                        <h3>Specifiche Tecniche</h3>
+                        <ul id="productSpecs">
+                            <li>Specifiche non disponibili</li>
+                        </ul>
+                    </div>
+
+                    <section class="reviews-section" id="productReviews">
+                        <div class="reviews-summary">
+                            <div class="reviews-rating">
+                                <div class="stars" id="reviewStars">★★★★★</div>
+                                <div class="review-average" id="reviewAverage">4.9</div>
+                            </div>
+                            <div class="reviews-meta">Basato su 3 recensioni verificate</div>
+                        </div>
+                        <div id="reviewCards" class="reviews-grid">
+                            <!-- Recensioni caricate da JavaScript -->
+                        </div>
+                    </section>
+
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button id="decreaseQty">-</button>
+                            <input type="number" id="quantityInput" value="1" min="1" max="99">
+                            <button id="increaseQty">+</button>
+                        </div>
+                        <button id="addToCartBtn" class="cta-button">Aggiungi al Carrello</button>
+                    </div>
+
+                    <div class="product-badges">
+                        <span class="badge">✓ Spedizione Gratuita</span>
+                        <span class="badge">✓ Garanzia 2 Anni</span>
+                        <span class="badge">✓ Reso Garantito</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="related-products">
+                <h2>Prodotti Correlati</h2>
+                <div id="relatedProductsGrid" class="products-grid"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Chi Siamo</h4>
+                <p>SCUBA.SHOP è il leader nel settore dell'attrezzatura subacquea premium.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Link Utili</h4>
+                <ul>
+                    <li><a href="./catalogo.html">Catalogo</a></li>
+                    <li><a href="./contatti.html">Contatti</a></li>
+                    <li><a href="./carrello.html">Carrello</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contatti</h4>
+                <p>Email: info@scuba.shop</p>
+                <p>Tel: +39 123 456 7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SCUBA.SHOP | Created by Carlo Di Bari & Giorgio Sassanelli — 5L</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+</html>

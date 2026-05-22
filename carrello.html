@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrello - SCUBA.SHOP</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="depth-overlay"></div>
+    <div class="ocean-ambient">
+        <span class="bubble bubble-1"></span>
+        <span class="bubble bubble-2"></span>
+        <span class="bubble bubble-3"></span>
+        <span class="bubble bubble-4"></span>
+        <span class="bubble bubble-5"></span>
+        <span class="seaweed seaweed-1"></span>
+        <span class="seaweed seaweed-2"></span>
+        <span class="seaweed seaweed-3"></span>
+    </div>
+    
+    <div class="depth-indicator"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="./index.html" class="logo">SCUBA.SHOP</a>
+            <div class="nav-menu">
+                <a href="./index.html" class="nav-link">HOME</a>
+                <a href="./catalogo.html" class="nav-link">CATALOGO</a>
+                <a href="./contatti.html" class="nav-link">CONTATTI</a>
+                <a href="./carrello.html" class="nav-link cart-link active">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Title -->
+    <section class="page-header">
+        <h1>IL TUO CARRELLO</h1>
+        <p>Rivedi gli articoli selezionati</p>
+    </section>
+
+    <!-- Cart Content -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-layout">
+                <!-- Cart Items -->
+                <div class="cart-items-container">
+                    <div id="cartItemsContainer">
+                        <div class="empty-cart">
+                            <p>Il tuo carrello è vuoto</p>
+                            <a href="./catalogo.html" class="secondary-button">Continua lo Shopping</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h3>Riepilogo Ordine</h3>
+                    
+                    <div class="summary-row">
+                        <span>Subtotale:</span>
+                        <span id="subtotal">€0.00</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Spedizione:</span>
+                        <span id="shipping">Gratuita</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>IVA (22%):</span>
+                        <span id="tax">€0.00</span>
+                    </div>
+
+                    <div class="summary-divider"></div>
+                    
+                    <div class="summary-row total">
+                        <span>TOTALE:</span>
+                        <span id="total">€0.00</span>
+                    </div>
+
+                    <button id="checkoutBtn" class="cta-button" style="width: 100%; margin-top: 20px;">
+                        PROCEDI AL CHECKOUT
+                    </button>
+
+                    <a href="./catalogo.html" class="secondary-button" style="text-align: center; display: block; margin-top: 10px;">
+                        Continua lo Shopping
+                    </a>
+
+                    <div class="cart-benefits">
+                        <p>✓ Spedizione Gratuita</p>
+                        <p>✓ Pagamento Sicuro</p>
+                        <p>✓ Garanzia 2 Anni</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Chi Siamo</h4>
+                <p>SCUBA.SHOP è il leader nel settore dell'attrezzatura subacquea premium.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Link Utili</h4>
+                <ul>
+                    <li><a href="./catalogo.html">Catalogo</a></li>
+                    <li><a href="./contatti.html">Contatti</a></li>
+                    <li><a href="./carrello.html">Carrello</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contatti</h4>
+                <p>Email: info@scuba.shop</p>
+                <p>Tel: +39 123 456 7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SCUBA.SHOP | Created by Carlo Di Bari & Giorgio Sassanelli — 5L</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+</html>

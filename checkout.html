@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - SCUBA.SHOP</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="depth-overlay"></div>
+    <div class="ocean-ambient">
+        <span class="bubble bubble-1"></span>
+        <span class="bubble bubble-2"></span>
+        <span class="bubble bubble-3"></span>
+        <span class="bubble bubble-4"></span>
+        <span class="bubble bubble-5"></span>
+        <span class="seaweed seaweed-1"></span>
+        <span class="seaweed seaweed-2"></span>
+        <span class="seaweed seaweed-3"></span>
+    </div>
+    
+    <div class="depth-indicator"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="./index.html" class="logo">SCUBA.SHOP</a>
+            <div class="nav-menu">
+                <a href="./index.html" class="nav-link">HOME</a>
+                <a href="./catalogo.html" class="nav-link">CATALOGO</a>
+                <a href="./contatti.html" class="nav-link">CONTATTI</a>
+                <a href="./carrello.html" class="nav-link cart-link">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Title -->
+    <section class="page-header">
+        <h1>CHECKOUT SICURO</h1>
+        <p>Completa il tuo ordine in modo semplice e veloce</p>
+    </section>
+
+    <!-- Checkout Form -->
+    <section class="checkout-section">
+        <div class="container">
+            <div class="checkout-layout">
+                <!-- Checkout Form -->
+                <div class="checkout-form-container">
+                    <form id="checkoutForm" class="checkout-form">
+                        <!-- Dati Personali -->
+                        <div class="form-section">
+                            <h3>Dati Personali</h3>
+                            <div class="form-row">
+                                <input type="text" placeholder="Nome" required class="form-input">
+                                <input type="text" placeholder="Cognome" required class="form-input">
+                            </div>
+                            <input type="email" placeholder="Email" required class="form-input">
+                            <input type="tel" placeholder="Telefono" required class="form-input">
+                        </div>
+
+                        <!-- Indirizzo di Spedizione -->
+                        <div class="form-section">
+                            <h3>Indirizzo di Spedizione</h3>
+                            <input type="text" placeholder="Via/Piazza" required class="form-input">
+                            <div class="form-row">
+                                <input type="text" placeholder="Numero Civico" required class="form-input">
+                                <input type="text" placeholder="CAP" required class="form-input">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" placeholder="Città" required class="form-input">
+                                <input type="text" placeholder="Provincia" required class="form-input">
+                            </div>
+                        </div>
+
+<!-- Metodo di Pagamento -->
+<div class="form-section payment-section">
+    <h3>Metodo di Pagamento</h3>
+
+    <div class="payment-methods" role="radiogroup" aria-label="Metodo di pagamento">
+        <label class="payment-option">
+            <input type="radio" name="payment" value="card" checked>
+            <span class="payment-icon payment-icon-card" aria-hidden="true">
+                <svg viewBox="0 0 64 40" focusable="false">
+                    <rect width="64" height="40" rx="8"></rect>
+                    <text x="32" y="25" text-anchor="middle">VISA</text>
+                </svg>
+            </span>
+            <span class="payment-copy">
+                <span class="payment-title">Carta di Credito</span>
+                <span class="payment-subtitle">Visa</span>
+            </span>
+        </label>
+
+        <label class="payment-option">
+            <input type="radio" name="payment" value="bank">
+            <span class="payment-icon payment-icon-bank" aria-hidden="true">
+                <svg viewBox="0 0 64 40" focusable="false">
+                    <path d="M8 17 32 6l24 11v5H8z"></path>
+                    <path d="M13 24h6v10h-6zm16 0h6v10h-6zm16 0h6v10h-6z"></path>
+                    <path d="M9 35h46v4H9z"></path>
+                </svg>
+            </span>
+            <span class="payment-copy">
+                <span class="payment-title">Bonifico Bancario</span>
+                <span class="payment-subtitle">Pagamento tramite banca</span>
+            </span>
+        </label>
+
+        <label class="payment-option">
+            <input type="radio" name="payment" value="paypal">
+            <span class="payment-icon payment-icon-paypal" aria-hidden="true">
+                <svg viewBox="0 0 64 40" focusable="false">
+                    <rect width="64" height="40" rx="8"></rect>
+                    <path d="M19 29 24 11h12c5 0 8 3 7 7-1 5-5 8-11 8h-5l-1 3z"></path>
+                    <path d="M28 33 33 15h11c5 0 7 3 6 7-1 5-5 8-10 8h-5l-1 3z"></path>
+                </svg>
+            </span>
+            <span class="payment-copy">
+                <span class="payment-title">PayPal</span>
+                <span class="payment-subtitle">Checkout rapido</span>
+            </span>
+        </label>
+    </div>
+    <div id="cardDetails" class="payment-details card-details is-active" data-payment-details="card">
+        <input type="text" placeholder="Numero Carta (16 cifre)" required class="form-input" maxlength="19">
+        <div class="form-row">
+            <input type="text" placeholder="MM/YY" required class="form-input" maxlength="5">
+            <input type="text" placeholder="CVV" required class="form-input" maxlength="3">
+        </div>
+    </div>
+
+    <div id="paypalDetails" class="payment-details" data-payment-details="paypal">
+        <p class="payment-note">Verrai reindirizzato a PayPal per completare il pagamento simulato.</p>
+        <input type="email" placeholder="Email PayPal" class="form-input">
+    </div>
+
+    <div id="bankDetails" class="payment-details" data-payment-details="bank">
+        <p class="payment-note">Riceverai le coordinate bancarie nella conferma ordine simulata.</p>
+        <input type="text" placeholder="Nome intestatario conto" class="form-input">
+        <input type="text" placeholder="IBAN" class="form-input">
+    </div>
+</div>
+                        <!-- Terms & Conditions -->
+                        <div class="form-section">
+                            <label class="checkbox-label">
+                                <input type="checkbox" required>
+                                <span>Accetto i termini e le condizioni di vendita</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                <span>Desidero ricevere newsletter e offerte speciali</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="cta-button" style="width: 100%;">
+                            CONFERMA ORDINE
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+               <div class="checkout-summary">
+                    <h3>Riepilogo Ordine</h3>
+                    <div id="checkoutOrderItems" class="checkout-items">
+                        <div class="empty-message">Nessun articolo</div>
+                    </div>
+                    <div class="checkout-total">
+                        <div class="total-row">
+                            <span>Subtotale:</span>
+                            <span id="checkoutSubtotal">€0.00</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Spedizione:</span>
+                            <span>Gratuita</span>
+                        </div>
+                        <div class="total-row">
+                            <span>IVA (22%):</span>
+                            <span id="checkoutTax">€0.00</span>
+                        </div>
+                        <div class="total-divider"></div>
+                        <div class="total-row final">
+                            <span>TOTALE:</span>
+                            <span id="checkoutTotal">€0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal" style="display: none;">
+        <div class="modal-content success-modal">
+            <div class="success-icon">✓</div>
+            <h2>Ordine Confermato!</h2>
+            <p>Grazie per il tuo acquisto. Riceverai una conferma via email.</p>
+            <p class="order-id">Numero Ordine: <strong id="orderId">-</strong></p>
+            <a href="./index.html" class="cta-button">Torna alla Home</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Chi Siamo</h4>
+                <p>SCUBA.SHOP è il leader nel settore dell'attrezzatura subacquea premium.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Link Utili</h4>
+                <ul>
+                    <li><a href="./catalogo.html">Catalogo</a></li>
+                    <li><a href="./contatti.html">Contatti</a></li>
+                    <li><a href="./carrello.html">Carrello</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contatti</h4>
+                <p>Email: info@scuba.shop</p>
+                <p>Tel: +39 123 456 7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SCUBA.SHOP | Created by Carlo Di Bari & Giorgio Sassanelli — 5L</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+</html>

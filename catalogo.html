@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo - SCUBA.SHOP</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="depth-overlay"></div>
+    <div class="ocean-ambient">
+        <span class="bubble bubble-1"></span>
+        <span class="bubble bubble-2"></span>
+        <span class="bubble bubble-3"></span>
+        <span class="bubble bubble-4"></span>
+        <span class="bubble bubble-5"></span>
+        <span class="seaweed seaweed-1"></span>
+        <span class="seaweed seaweed-2"></span>
+        <span class="seaweed seaweed-3"></span>
+    </div>
+    
+    <div class="depth-indicator"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="./index.html" class="logo">SCUBA.SHOP</a>
+            <div class="nav-menu">
+                <a href="./index.html" class="nav-link">HOME</a>
+                <a href="./catalogo.html" class="nav-link active">CATALOGO</a>
+                <a href="./contatti.html" class="nav-link">CONTATTI</a>
+                <a href="./carrello.html" class="nav-link cart-link">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Title -->
+    <section class="page-header">
+        <h1>CATALOGO COMPLETO</h1>
+        <p>Scopri la nostra selezione esclusiva di attrezzatura subacquea</p>
+    </section>
+
+    <!-- Filters & Search -->
+    <section class="catalog-section">
+        <div class="container">
+            <div class="catalog-header">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Cerca prodotto..." class="search-input">
+                    <span class="search-icon">🔍</span>
+                </div>
+                
+                <div class="filters">
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="">Tutte le Categorie</option>
+                        <option value="mute">Mute</option>
+                        <option value="bombole">Bombole</option>
+                        <option value="regolatori">Regolatori</option>
+                        <option value="gavette">Gavette</option>
+                        <option value="orologi">Orologi Dive</option>
+                        <option value="pinne">Pinne</option>
+                        <option value="maschere">Maschere</option>
+                        <option value="accessori">Accessori</option>
+                    </select>
+
+                    <select id="priceFilter" class="filter-select">
+                        <option value="">Tutti i Prezzi</option>
+                        <option value="0-500">€0 - €500</option>
+                        <option value="500-1000">€500 - €1000</option>
+                        <option value="1000-2000">€1000 - €2000</option>
+                        <option value="2000">€2000+</option>
+                    </select>
+
+                    <select id="brandFilter" class="filter-select">
+                        <option value="">Tutti i Brand</option>
+                        <option value="Cressi">Cressi</option>
+                        <option value="Mares">Mares</option>
+                        <option value="Scubapro">Scubapro</option>
+                        <option value="Aqua Lung">Aqua Lung</option>
+                        <option value="Apeks">Apeks</option>
+                        <option value="Suunto">Suunto</option>
+                        <option value="Garmin Dive">Garmin Dive</option>
+                        <option value="Oceanic">Oceanic</option>
+                        <option value="Aqua Sub">Aqua Sub</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="productsGrid" class="products-grid"></div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="no-results" style="display:none;">
+                <p>Nessun prodotto trovato. Prova a modificare i filtri.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Chi Siamo</h4>
+                <p>SCUBA.SHOP è il leader nel settore dell'attrezzatura subacquea premium.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Link Utili</h4>
+                <ul>
+                    <li><a href="./catalogo.html">Catalogo</a></li>
+                    <li><a href="./contatti.html">Contatti</a></li>
+                    <li><a href="./carrello.html">Carrello</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contatti</h4>
+                <p>Email: info@scuba.shop</p>
+                <p>Tel: +39 123 456 7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SCUBA.SHOP | Created by Carlo Di Bari & Giorgio Sassanelli — 5L</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+</html>
